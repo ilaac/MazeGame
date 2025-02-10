@@ -519,6 +519,7 @@ GameObject:
   - component: {fileID: 8723652473216096551}
   - component: {fileID: 1976167202462095813}
   - component: {fileID: 1500462775214701861}
+  - component: {fileID: 8387351542793918096}
   m_Layer: 0
   m_Name: Spooky
   m_TagString: Untagged
@@ -631,6 +632,20 @@ MonoBehaviour:
   despawnSound: {fileID: 8300000, guid: 949121427dc842d47ad3e0480fe83806, type: 3}
   lightDetectionThreshold: 2
   maxAngle: 30
+--- !u!114 &8387351542793918096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106181584689699589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24b2a59a4230a648b421c6be36f7cd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 6.5
+  despawnSound: {fileID: 8300000, guid: 949121427dc842d47ad3e0480fe83806, type: 3}
 --- !u!1 &8663434710157354662
 GameObject:
   m_ObjectHideFlags: 0

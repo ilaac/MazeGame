@@ -16,21 +16,43 @@ public class DoorInteraction : MonoBehaviour
     private bool doorMoving = false;
     private Vector3 targetPosition;
 
+    // Reference to the UI element to show/hide
+    public GameObject interactionUI;
+
     void Start()
     {
         player = Camera.main.transform;
         isPlayerInRange = false;
+
+        // Make sure the UI is hidden at the start
+        if (interactionUI != null)
+        {
+            interactionUI.SetActive(false);
+        }
     }
 
     void Update()
     {
+        // Check if the player is within interaction range
         if (Vector3.Distance(player.position, transform.position) <= interactionRange)
         {
             isPlayerInRange = true;
+
+            // Show the interaction UI when the player is in range
+            if (interactionUI != null && !interactionUI.activeSelf)
+            {
+                interactionUI.SetActive(true);
+            }
         }
         else
         {
             isPlayerInRange = false;
+
+            // Hide the interaction UI when the player is out of range
+            if (interactionUI != null && interactionUI.activeSelf)
+            {
+                interactionUI.SetActive(false);
+            }
         }
 
         // If the player is in range and presses E, trigger the interaction

@@ -41,8 +41,8 @@ AudioSource:
   m_GameObject: {fileID: 2128752560517748342}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 24afe35a5a30fee4dacdb0918d50d898, type: 3}
+  OutputAudioMixerGroup: {fileID: 2390718385625805685, guid: 6c899e8c4e04cf34ca4309757f62232b, type: 2}
+  m_audioClip: {fileID: 8300000, guid: cafbd94dd73e896478c8997722a2a21a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -50,7 +50,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 0.86510277
   MaxDistance: 500
@@ -249,12 +249,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 0}
-  interactionRange: 3
-  Moveamount: 3.25
-  moveSpeed: 1
+  interactionRange: 1.75
+  Moveamount: 3
+  moveSpeed: 0.75
   buttonAnimator: {fileID: 7259399234512279164}
   buttonPressAnimation: ButtonPress
-  openSound: {fileID: 0}
+  isPressed: 0
+  openSound: {fileID: 7523698235575623283}
+  interactionUI: {fileID: 0}
 --- !u!1 &7259399234512279143
 GameObject:
   m_ObjectHideFlags: 0
