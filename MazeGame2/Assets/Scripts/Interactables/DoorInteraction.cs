@@ -8,6 +8,7 @@ public class DoorInteraction : MonoBehaviour
     public float moveSpeed = 2f;
     public Animator buttonAnimator;
     public string buttonPressAnimation = "ButtonPress";
+    public bool isPressed = false;
 
     [SerializeField] private AudioSource openSound;
     private Transform player;
@@ -17,7 +18,8 @@ public class DoorInteraction : MonoBehaviour
 
     void Start()
     {
-        player = Camera.main.transform; // Assuming the player is the main camera
+        player = Camera.main.transform;
+        isPlayerInRange = false;
     }
 
     void Update()
@@ -66,6 +68,8 @@ public class DoorInteraction : MonoBehaviour
             doorMoving = true; // Start moving the door
         }
         openSound.Play();
+        isPlayerInRange = true;
+        isPressed = true;
         Moveamount = 0f;
     }
 }
