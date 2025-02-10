@@ -629,10 +629,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   despawnSound: {fileID: 8300000, guid: 949121427dc842d47ad3e0480fe83806, type: 3}
-  lightDetectionThreshold: 0.25
-  lightBlockingLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  lightDetectionThreshold: 2
+  maxAngle: 30
 --- !u!1 &8663434710157354662
 GameObject:
   m_ObjectHideFlags: 0

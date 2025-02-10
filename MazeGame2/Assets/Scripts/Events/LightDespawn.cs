@@ -4,11 +4,11 @@ public class LightDespawn : MonoBehaviour
 {
     public AudioClip despawnSound; // Assign sound in the inspector
     public float lightDetectionThreshold = 0.1f; // Minimum intensity to trigger despawn
-    public LayerMask lightBlockingLayers; // Define what can block the light
-    
+    public float maxAngle = 30f; // Max angle between light direction and object to consider as "pointed at"
+
     private AudioSource audioSource;
     private Renderer objectRenderer;
-    
+
     void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
@@ -29,20 +29,26 @@ public class LightDespawn : MonoBehaviour
     private bool IsHitByLight()
     {
         Light[] lights = FindObjectsOfType<Light>();
+
         foreach (Light light in lights)
         {
-            if (light.enabled && light.intensity > lightDetectionThreshold)
+            // Only consider spotlights
+            if (light.type == LightType.Spot && light.enabled && light.intensity > lightDetectionThreshold)
             {
-                Vector3 directionToLight = (light.transform.position - transform.position).normalized;
-                float distanceToLight = Vector3.Distance(transform.position, light.transform.position);
-                
-                if (!Physics.Raycast(transform.position, directionToLight, distanceToLight, lightBlockingLayers))
+                // Calculate the direction from the light to the object
+                Vector3 directionToObject = transform.position - light.transform.position;
+                directionToObject.Normalize(); // Direction from light to object
+
+                // Check if the object is within the spotlight's cone using angle
+                float angle = Vector3.Angle(light.transform.forward, directionToObject);
+                if (angle <= light.spotAngle / 2f) // Angle is within the cone
                 {
-                    return true;
+                    return true; // Object is within the spotlight's line of sight and cone
                 }
             }
         }
-        return false;
+
+        return false; // No spotlight was detected pointing at the object
     }
 
     private void PlayDespawnSound()
