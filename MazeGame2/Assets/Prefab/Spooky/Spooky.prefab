@@ -629,9 +629,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c9908d1384bc64fbf2217036bd5a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawnSound: {fileID: 8300000, guid: 949121427dc842d47ad3e0480fe83806, type: 3}
+  despawnSound: {fileID: 8300000, guid: 6546b2e588a984b478a9b8570447da23, type: 3}
   lightDetectionThreshold: 2
   maxAngle: 30
+  lightDetectionRange: 10
 --- !u!114 &8387351542793918096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 6.5
-  despawnSound: {fileID: 8300000, guid: 949121427dc842d47ad3e0480fe83806, type: 3}
+  despawnSound: {fileID: 8300000, guid: 6546b2e588a984b478a9b8570447da23, type: 3}
 --- !u!1 &8663434710157354662
 GameObject:
   m_ObjectHideFlags: 0

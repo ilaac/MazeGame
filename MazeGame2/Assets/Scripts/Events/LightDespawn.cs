@@ -5,6 +5,7 @@ public class LightDespawn : MonoBehaviour
     public AudioClip despawnSound; // Assign sound in the inspector
     public float lightDetectionThreshold = 0.1f; // Minimum intensity to trigger despawn
     public float maxAngle = 30f; // Max angle between light direction and object to consider as "pointed at"
+    public float lightDetectionRange = 10f; // Maximum range at which the object detects light
 
     private AudioSource audioSource;
     private Renderer objectRenderer;
@@ -37,7 +38,13 @@ public class LightDespawn : MonoBehaviour
             {
                 // Calculate the direction from the light to the object
                 Vector3 directionToObject = transform.position - light.transform.position;
-                directionToObject.Normalize(); // Direction from light to object
+                float distanceToLight = directionToObject.magnitude;
+
+                // Check if the object is within range
+                if (distanceToLight > lightDetectionRange)
+                    continue;
+
+                directionToObject.Normalize(); // Normalize direction
 
                 // Check if the object is within the spotlight's cone using angle
                 float angle = Vector3.Angle(light.transform.forward, directionToObject);
