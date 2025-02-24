@@ -10635,7 +10635,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'MainMenu
+  m_text: 'Main Menu
 
 '
   m_isRightToLeft: 0
@@ -19296,7 +19296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4183289520222650, guid: 1d68f4c5abb3c1b42a2e8260bc5d0822, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5
+      value: -8.15
       objectReference: {fileID: 0}
     - target: {fileID: 4183289520222650, guid: 1d68f4c5abb3c1b42a2e8260bc5d0822, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20027,6 +20027,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4017468960411093441, guid: 36bf6d9dd5b30c545adc1b8d6d08c963, type: 3}
+      propertyPath: m_Name
+      value: Main Camera ----> disable
+      objectReference: {fileID: 0}
     - target: {fileID: 5829627586455087136, guid: 36bf6d9dd5b30c545adc1b8d6d08c963, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.91
@@ -20075,6 +20079,14 @@ PrefabInstance:
       propertyPath: chargingImage
       value: 
       objectReference: {fileID: 126339543}
+    - target: {fileID: 9091674565946397940, guid: 36bf6d9dd5b30c545adc1b8d6d08c963, type: 3}
+      propertyPath: batteryDrainRate
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091674565946397940, guid: 36bf6d9dd5b30c545adc1b8d6d08c963, type: 3}
+      propertyPath: batteryRechargeRate
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

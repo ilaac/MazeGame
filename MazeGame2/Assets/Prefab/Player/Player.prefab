@@ -105,7 +105,6 @@ GameObject:
   - component: {fileID: 1768576012710909034}
   - component: {fileID: 6002383088874523703}
   - component: {fileID: 5445930398078124939}
-  - component: {fileID: 2948275186059256592}
   m_Layer: 0
   m_Name: Main Camera ----> dsable
   m_TagString: MainCamera
@@ -197,14 +196,6 @@ MonoBehaviour:
   MaxTilt: 4
   TiltSpeed: 6
   playerBody: {fileID: 2754785470081359960}
---- !u!81 &2948275186059256592
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4017468960411093441}
-  m_Enabled: 1
 --- !u!1 &4560760652390258886
 GameObject:
   m_ObjectHideFlags: 0
